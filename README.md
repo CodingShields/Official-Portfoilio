@@ -1,14 +1,14 @@
 # Mikey Shields Portfolio
 ## Welcome to the GitHub repository for my personal portfolio app. This portfolio showcases my skills, projects, and experiences as a software developer. Built with modern web technologies, it's designed to offer a comprehensive look at my professional capabilities and interests.
 
-### Features
+## Features
 #### Interactive UI: Engage with various sections like About, Skills, Projects, and Contact.
 #### Responsive Design: Optimized for a seamless experience across all devices.
 #### Dynamic Content: Rich multimedia integration, including images of projects and technology logos.
-### Technology Stack
+## Technology Stack
 #### Frontend: React (with JSX), JavaScript, Tailwind CSS for styling, Vite for efficient bundling and development.
 #### Assets: A diverse collection of project screenshots, technology logos, and a downloadable resume.
-### Project Structure
+## Project Structure
 src/: Main source code directory containing components, assets, and data files.
 components/: React components representing different UI sections.
 assets/: Images, documents, and other media utilized throughout the portfolio.

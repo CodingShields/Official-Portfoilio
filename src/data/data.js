@@ -3,6 +3,7 @@ import RealEst from "../assets/projects/realestate.jpg";
 import chef from "../assets/chef.png";
 import skinanarchy from "../assets/skinanarchy.png";
 import allhands from "../assets/allhands.png";
+import sampleFoodApp from "../assets/sampleFoodApp.png";
 export const data = [
 	{
 		id: 1,
@@ -27,10 +28,10 @@ export const data = [
 	},
 	{
 		id: 4,
-		name: "React JS Application",
-		image: RealEst,
-		github: "",
-		live: "",
+		name: "Sample Food Menu App",
+		image: sampleFoodApp,
+		github: "https://github.com/CodingShields/Sample-Food-App-React",
+		live: "https://startling-gecko-713e9c.netlify.app/",
 	},
 ];
 

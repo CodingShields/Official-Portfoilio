@@ -10,7 +10,6 @@ import codingshieldslogo from "../assets/codingshieldslogo.png";
 const Navbar = () => {
 	const [nav, setNav] = useState(false);
 	const [copied, setCopied] = useState(false);
-	const [modalMessage, setModalMessage] = useState("");
 
 	const handleClick = () => setNav(!nav);
 

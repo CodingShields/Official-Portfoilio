@@ -29,37 +29,40 @@ const Navbar = () => {
 	};
 
 	return (
-		<div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-black bg-opacity-50 text-gray-300'>
+		<div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-black hover:bg-opacity-30 bg-opacity-50 text-gray-300 transition-all ease-in-out duration-700 group'>
 			<div>
 				{" "}
 				<Link to='home' smooth={true} duration={500}>
-					<img src={codingshieldslogo} className='w-24 rounded-2xl mt-14 hover:cursor-pointer hover:animate-pulse' />
+					<img
+						src={codingshieldslogo}
+						className='w-16 hover:scale-150 transition-all duration-500 ease-in-out rounded-2xl mt-16 ml-12 hover:cursor-pointer hover:animate-pulse'
+					/>
 				</Link>
 			</div>
 
 			{/* menu */}
-			<ul className='hidden md:flex text-white text-xl space-x-8'>
-				<li className='hover:text-pink-500 hover:scale-125 duration-300'>
+			<ul className='hidden md:flex text-white text-xl space-x-8 group-hover:text-pink-300 ease-in-out duration-300 transition-all'>
+				<li className='hover:text-pink-500 hover:scale-125 duration-200'>
 					<Link to='home' smooth={true} duration={500}>
 						Home
 					</Link>
 				</li>
-				<li className='hover:text-pink-500 hover:scale-125 duration-300'>
+				<li className='hover:text-pink-500 hover:scale-125 duration-200'>
 					<Link to='about' smooth={true} duration={500}>
 						About
 					</Link>
 				</li>
-				<li className='hover:text-pink-500 hover:scale-125 duration-300'>
+				<li className='hover:text-pink-500 hover:scale-125 duration-200'>
 					<Link to='skills' smooth={true} duration={500}>
 						Skills
 					</Link>
 				</li>
-				<li className='hover:text-pink-500 hover:scale-125 duration-300'>
+				<li className='hover:text-pink-500 hover:scale-125 duration-200'>
 					<Link to='work' smooth={true} duration={500}>
 						Work
 					</Link>
 				</li>
-				<li className='hover:text-pink-500 hover:scale-125 duration-300'>
+				<li className='hover:text-pink-500 hover:scale-125 duration-200 '>
 					<Link to='contact' smooth={true} duration={500}>
 						Contact
 					</Link>
@@ -105,37 +108,43 @@ const Navbar = () => {
 			</ul>
 
 			{/* Social icons */}
-			<div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
-				<ul>
-					<li className='w-[160px] h-[80px] flex pl-4 hover:w-[180px] justify-between items-center ml-[-100px] hover:ml-[.25px] duration-300 bg-blue-600'>
-						<a className='flex justify-between items-center w-full text-gray-300' href='https://www.linkedin.com/in/mikeshieldsdev/' target='_blank'>
-							Linkedin <FaLinkedin className='px-2 h-20' size={48} />
-						</a>
-					</li>
-					<li className='w-[160px] h-[80px] flex pl-4 hover:w-[180px] justify-between items-center ml-[-100px] hover:ml-[.25px] duration-300 bg-[#333333]'>
-						<a className='flex justify-between items-center w-full text-gray-300' href='https://github.com/CodingShields' target='_blank'>
-							Github <FaGithub className='px-2 h-20' size={48} />
-						</a>
-					</li>
-					<li
-						onClick={handleCopyToClipboard}
-						className='w-[160px] h-[80px] flex pl-4 hover:w-[180px] justify-between items-center ml-[-100px] hover:ml-[.25px] duration-300 bg-[#6fc2b0]'
-					>
-						<a className='flex justify-between items-center w-full text-gray-300' href={`mailto:sweshields@gmail.com`}>
-							Email <HiOutlineMail className='px-2 h-20' size={48} />
-						</a>
-					</li>
-					<Modal isOpen={copied} onClose={() => setCopied(false)} children={"Email Copied To Clipboard"} />
+			<div className='hidden lg:flex fixed flex-col top-[35%] left-0 '>
+				<div className='animate-pulse hover:shadow-none hover:animate-none'>
+					<ul className='space-y-[2px]'>
+						<li className='w-[160px] h-[80px] flex pl-4 hover:w-[215px] justify-between items-center ml-[-100px] hover:ml-[25px]  bg-blue-600 hover:scale-125 ease-in-out transition-all duration-300 hover:my-4'>
+							<a
+								className='flex justify-between items-center w-full text-gray-300'
+								href='https://www.linkedin.com/in/mikeshieldsdev/'
+								target='_blank'
+							>
+								Linkedin <FaLinkedin className='px-2 h-20' size={48} />
+							</a>
+						</li>
+						<li className='w-[160px] h-[80px] flex pl-4 hover:w-[215px] justify-between items-center ml-[-100px] hover:ml-[25px]  duration-300 bg-[#333333]  hover:scale-125 ease-in-out transition-all hover:my-4'>
+							<a className='flex justify-between items-center w-full text-gray-300' href='https://github.com/CodingShields' target='_blank'>
+								Github <FaGithub className='px-2 h-20' size={48} />
+							</a>
+						</li>
+						<li
+							onClick={handleCopyToClipboard}
+							className='w-[160px] h-[80px] flex pl-4 hover:w-[215px] justify-between items-center ml-[-100px] hover:ml-[25px] duration-300 bg-[#6fc2b0] hover:scale-125 ease-in-out transition-all hover:my-4'
+						>
+							<a className='flex justify-between items-center w-full text-gray-300' href={`mailto:sweshields@gmail.com`}>
+								Email <HiOutlineMail className='px-2 h-20' size={48} />
+							</a>
+						</li>
+						<Modal isOpen={copied} onClose={() => setCopied(false)} children={"Email Copied To Clipboard"} />
 
-					<li
-						onClick={handleResumeDownload}
-						className='w-[160px] hover:w-[180px]  h-[80px] flex pl-4 justify-between items-center ml-[-100px] hover:ml-[.25px] duration-300 bg-[#565f69]'
-					>
-						<a className='flex justify-between items-center w-full text-gray-300 ' href='/'>
-							Resume <BsFillPersonLinesFill className='px-2 h-20' size={48} />
-						</a>
-					</li>
-				</ul>
+						<li
+							onClick={handleResumeDownload}
+							className='w-[160px]  h-[80px] flex pl-4 justify-between items-center ml-[-100px] hover:ml-[25px] hover:w-[215px] duration-300 bg-[#565f69] hover:scale-125 ease-in-out transition-all hover:my-4'
+						>
+							<a className='flex justify-between items-center w-full text-gray-300 ' href='/'>
+								Resume <BsFillPersonLinesFill className='px-2 h-20' size={48} />
+							</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	);

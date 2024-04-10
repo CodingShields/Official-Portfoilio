@@ -3,6 +3,9 @@ export default {
 	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
 	theme: {
 		extend: {
+			backgroundImage: {
+				"hero-pattern": "url('/src/assets/bg.mp4')",
+			},
 			animation: {
 				fadeIn: "fadeIn .5s ease-in forwards",
 				fadeOut: "fadeOut .5s ease-out forwards",

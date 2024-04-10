@@ -7,7 +7,7 @@ const Work = () => {
 	//setProject(data);
 
 	return (
-		<div name='work' className='w-full md:h-screen text-gray-300 bg-[#0a192f]'>
+		<div name='work' className='w-full md:h-screen text-gray-300 bg-gradient-to-l from-[#0a192f] to-black '>
 			<div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
 				<div className='pb-8'>
 					<p className='text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600'>Projects</p>
@@ -29,7 +29,7 @@ const Work = () => {
 							<div className='opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out z-30 flex flex-col justify-center items-center h-full'>
 								<h2 className='text-2xl font bold text-white tracking-wider pt-2'>{item.name}</h2>
 								<div className='w-fit px-2 mx-auto mt-2'>
-									<p className='text-lg font-bold text-white font-thin '>{item.about}</p>
+									<p className='text-lg  text-white font-thin '>{item.about}</p>
 								</div>
 								<div className='pt-2 text-center '>
 									{/* eslint-disable-next-line */}

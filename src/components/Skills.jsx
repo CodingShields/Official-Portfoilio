@@ -4,20 +4,20 @@ const Skills = () => {
 		<div name='skills' className='w-full h-fit  text-gray-300 '>
 			<div className='w-full h-full'>
 				<div className='p-4 flex flex-col justify-center items-center w-full h-fit'>
-					<p className='text-7xl font-extralight w-3/5 '>Skills</p>
-					<div className='border-b-2 border-pink-600 w-3/5 mt-2'></div>
+					<p className='text-7xl font-extralight w-3/5 sm:text-5xl '>Skills</p>
+					<div className='border-b-2 border-pink-600 w-3/5 mt-2 sm:w-full'></div>
 
-					<p className='py-8 text-3xl'>// These are the technologies I've worked with</p>
+					<p className='py-8 sm:py-4 text-3xl sm:text-lg'>// These are the technologies I've worked with</p>
 
-					<div className='w-1/2 grid grid-cols-4  sm:grid-cols-4 gap-6 text-center py-8'>
+					<div className='w-1/2 grid grid-cols-4  sm:grid-cols-4 gap-6 sm:w-full text-center py-8 sm:gap-2'>
 						{skillsArray.map((item, id) => {
 							return (
 								<div
 									key={id}
-									className='h-fit w-fit p-4 hover:scale-125 duration-500 transition-all ease-in-out  rounded-b-3xl  border-black/50 mx-auto'
+									className='h-fit w-fit p-4 mx-auto hover:scale-125 duration-500 transition-all ease-in-out  rounded-b-3xl  border-black/50 mx-auto'
 								>
-									<img src={item.src} alt={item.alt} className='h-24  mb-2' />
-									<p>{item.title}</p>
+									<img src={item.src} alt={item.alt} className='h-24 sm:h-8 mb-2 mx-auto' />
+									<p className="sm:text-sm">{item.title}</p>
 								</div>
 							);
 						})}

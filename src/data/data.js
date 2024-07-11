@@ -31,7 +31,7 @@ export const data = [
 	},
 	{
 		id: 4,
-		name: "Sample Food Menu App",
+		name: "Food Menu App",
 		about: "Food Menu App for Restaurants and Online Ordering",
 		image: sampleFoodApp,
 		github: "https://github.com/CodingShields/Sample-Food-App-React",

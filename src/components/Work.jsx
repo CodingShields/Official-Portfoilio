@@ -7,7 +7,7 @@ const Work = () => {
 	//setProject(data);
 
 	return (
-		<div name='work' className='w-full h-full text-gray-300 bg-gradient-to-l from-[#0a192f] to-black '>
+		<div name='work' className='w-full h-fit text-gray-300 bg-gradient-to-l from-[#0a192f] to-black '>
 			<div className='w-full h-full '>
 				<div className='mx-auto p-4 flex flex-col justify-center items-center w-full h-fit'>
 					<p className='text-7xl font-extralight w-3/5'>Projects</p>

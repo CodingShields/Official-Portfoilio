@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { Link } from "react-scroll";
-import bg from "../assets/bg.mp4";
-const Home = () => {
+import Button from "./Button";
+import { buttonStyle } from "../styles/components";
+const Home = ({ mobile }) => {
 	const [active, setActive] = useState(false);
 
 	const [activeBanner, setActiveBanner] = useState(false);
@@ -10,11 +11,11 @@ const Home = () => {
 	useEffect(() => {
 		const timer = () => {
 			setTimeout(() => {
-				setActiveBanner(!activeBanner);
+				setActiveBanner(true);
 			}, 5000);
 		};
 		timer();
-	}, [activeBanner]);
+	}, []);
 
 	const handleMouseOver = () => {
 		setActive(true);
@@ -25,60 +26,30 @@ const Home = () => {
 	};
 
 	return (
-		<div name='home' className='w-full h-screen bg-gradient-to-l from-[#0a192f] to-black overscroll-none'>
-			{/* Container */}{" "}
-			<div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full '>
-				<div
-					className={
-						activeBanner
-							? "text-xl font-bold text-[#ccd6f6] animate-fadeIn duration-700 transition-all ease-in-out inline-flex "
-							: "animate-fadeOut duration-700 transition-all ease-in-out inline-flex"
-					}
-				>
-					<h1>This Portfolio was made with Tailwind CSS ...hover and click around</h1>
-					<h1 className='animate-bounce mx-2 text-3xl'>🤗</h1>
-				</div>
-				<div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
-					<video
-						onMouseOver={handleMouseOver}
-						onMouseOut={handleMouseOut}
-						className={
-							active
-								? "w-11/12 object-cover absolute right-0  h-[650px] rounded-l-full animate-fadeOut transition-all my-8"
-								: "w-11/12 object-cover absolute right-0 h-[650px] my-8 rounded-l-full animate-fadeIn shadow-lg shadow-[#5752e5]"
-						}
-						autoPlay
-						loop
-						muted
-						src={bg}
-						type='video/mp4'
-					/>
-				</div>
-				<div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} className='z-10 group mt-12 w-full '>
-					<p className='text-pink-600 text-xl animate-bounce group-hover:animate-none transition-all ease-in-out duration-300 font-semibold w-full'>
-						Hi, my name is
+		<div name='home' className='w-full sm:min-w-screen h-screen bg-gradient-to-l from-[#0a192f] to-black overscroll-none'>
+			<div className='w-full  mx-auto px-8 flex flex-col justify-center sm:pb-24 sm:pt-12 h-full items-center -wull'>
+				<div className='z-10 group mt-12 w-3/4 sm:w-full h-fit'>
+					<p className='text-pink-600 text-3xl  animate-bounce  font-semibold w-full'>Hi, my name is</p>
+					<h1 className=' text-9xl sm:text-5xl whitespace-nowrap font-thinner text-[#ccd6f6] '>Mikey Shields</h1>
+					<h2 className='text-5xl sm:text-2xl  text-[#8892b0] mt-4 font-thin sm:mt-4 indent-12 sm:indent-4'>
+						{" <> "} Software Engineer {" </> "}
+					</h2>
+					<p className='tracking-wider sm:text-center leading-[64px] sm:leading-[32px] text-white py-2 w-fit sm:px-4 sm:py-4 text-3xl sm:text-[17px] sm:overflow-x-clip sm:w-full sm:ml-0 ml-20 px-4  text-center  my-4 transition-all ease-in-out duration-500'>
+						I’m a Front-End developer specializing in building designing exceptional digital experiences. Currently, I’m focused on building customize
+						responsive web applications. Passionate about serverless architecture, cloud computing, and beautiful UI/UX.
 					</p>
-					<h1 className='text-4xl sm:text-7xl font-bold text-[#ccd6f6] '>Mikey Shields</h1>
-					<h2 className='text-4xl sm:text-7xl font-bold text-[#8892b0] '>I'm a Front End Developer.</h2>
-					<div className=' group-hover:my-12 group-hover:bg-slate-500 rounded-full transition-all ease-in-out group-hover:delay-200 duration-700 group-hover:scale-110 group-hover:shadow-2xl group-hover:shadow-pink-600'>
-						<p className='text-white py-2 max-w-[700px] text-xl  group-hover:text-[28px] bg-opacity-80 ml-20 px-4  text-left  my-4 transition-all ease-in-out duration-500'>
-							I’m a Front-End developer specializing in building designing exceptional digital experiences. Currently, I’m focused on building
-							customize responsive web applications. Passionate about serverless architecture, cloud computing, and beautiful UI/UX.
-						</p>
-					</div>
 
-					<div className='transition-all ease-in-out duration-700 cursor-pointer group-hover:py-8'>
-						<Link
+					<div className='transition-all ease-in-out duration-700 cursor-pointer mt-4 '>
+						<Button
+							text='View Work'
+							style={buttonStyle}
 							to='work'
-							smooth={true}
-							duration={500}
 							className='text-white group border-2 px-6 py-3 my-2 flex w-fit items-center bg-pink-600 hover:border-pink-600 hover:shadow-2xl hover:shadow-[#5752e5] ease-in-out duration-300 transition-all border-pink-300'
 						>
-							View Work
 							<span className='group-hover:rotate-90 duration-300'>
 								<HiArrowNarrowRight className='ml-3 ' />
 							</span>
-						</Link>
+						</Button>
 					</div>
 				</div>
 			</div>

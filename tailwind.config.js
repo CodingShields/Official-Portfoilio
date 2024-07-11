@@ -2,13 +2,29 @@
 export default {
 	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
 	theme: {
+		screens: {
+			xxl: { max: "1535px" },
+			// => @media (max-width: 1535px) { ... }
+
+			xl: { max: "1279px" },
+			// => @media (max-width: 1279px) { ... }
+
+			lg: { max: "1023px" },
+			// => @media (max-width: 1023px) { ... }
+
+			md: { max: "767px" },
+			// => @media (max-width: 767px) { ... }
+
+			sm: { max: "639px" },
+			// => @media (max-width: 639px) { ... }
+		},
 		extend: {
 			backgroundImage: {
 				"hero-pattern": "url('/src/assets/bg.mp4')",
 			},
 			animation: {
-				fadeIn: "fadeIn .5s ease-in forwards",
-				fadeOut: "fadeOut .5s ease-out forwards",
+				fadeIn: "fadeIn 1s ease-in forwards",
+				fadeOut: "fadeOut 1s ease-out forwards",
 			},
 			keyframes: {
 				fadeIn: {

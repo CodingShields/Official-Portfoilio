@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaBars, FaTimes, FaGithub, FaLinkedin, FaFacebook, FaLinkedinIn } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
@@ -7,8 +7,9 @@ import Modal from "./Modal";
 import resume from "../assets/documents/resume.pdf";
 import codingshieldslogo from "../assets/codingshieldslogo.png";
 
-const Navbar = () => {
+const Navbar = ({ mobile }) => {
 	const [nav, setNav] = useState(false);
+
 	const [copied, setCopied] = useState(false);
 
 	const handleClick = () => setNav(!nav);
@@ -29,13 +30,13 @@ const Navbar = () => {
 	};
 
 	return (
-		<div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-black hover:bg-opacity-30 bg-opacity-50 text-gray-300 transition-all ease-in-out duration-700 group'>
+		<div className='fixed w-full h-fit flex z-10 justify-between items-center px-4 bg-black hover:bg-opacity-30 bg-opacity-50 text-gray-300 transition-all ease-in-out duration-700 group'>
 			<div>
 				{" "}
 				<Link to='home' smooth={true} duration={500}>
 					<img
 						src={codingshieldslogo}
-						className='w-16 hover:scale-150 transition-all duration-500 ease-in-out rounded-2xl mt-16 ml-12 hover:cursor-pointer hover:animate-pulse'
+						className='w-16 sm:w-8 sm:h-8 hover:scale-150 transition-all duration-500 ease-in-out rounded-2xl mt-16 ml-12 hover:cursor-pointer hover:animate-pulse'
 					/>
 				</Link>
 			</div>
@@ -141,6 +142,12 @@ const Navbar = () => {
 						>
 							<a className='flex justify-between items-center w-full text-gray-300 ' href='/'>
 								Resume <BsFillPersonLinesFill className='px-2 h-20' size={48} />
+							</a>
+						</li>
+						<li className='w-[160px]  h-[80px] flex pl-4 justify-between items-center ml-[-100px] hover:ml-[25px] hover:w-[215px] duration-300 bg-[#565f69] hover:scale-125 ease-in-out transition-all hover:my-4'>
+							<a className='flex justify-between items-center w-full text-gray-300 ' href='/'>
+								DEV Garage COMING SOON!
+								<BsFillPersonLinesFill className='px-2 h-20' size={48} />
 							</a>
 						</li>
 					</ul>

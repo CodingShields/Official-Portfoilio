@@ -1,22 +1,46 @@
-import { useState } from "react"
+import Button from "./Button";
+import { buttonStyle } from "../styles/components";
+
 const Contact = () => {
-  
-  return (
-		<div name='contact' className='w-full h-screen flex justify-center items-center p-4 bg-gradient-to-l from-[#0a192f] to-black '>
-			<form method='POST' action='https://getform.io/f/a699a1b2-f225-434e-b317-1fbbde8e006c' className='flex flex-col max-w-[600px] w-full'>
-				<div className='pb-8'>
-					<p className='text-4xl font-bold inline border-b-4 border-pink-600 text-gray-300'>Contact</p>
-					<p className='text-gray-300 py-4'>// Submit the form below or shoot me an email - sweshields@gmail.com</p>
-				</div>
-				<input className='bg-[#ccd6f6] p-2' type='text' placeholder='Name' name='name' />
-				<input className='my-4 p-2 bg-[#ccd6f6]' type='email' placeholder='Email' name='email' />
-				<textarea className='bg-[#ccd6f6] p-2' name='message' rows='10' placeholder='Message'></textarea>
-				<button className='text-white border-2 hover:bg-pink-600 hover:border-pink-600 px-4 py-3 my-8 mx-auto flex items-center'>
-					Let's Collaborate
-				</button>
-			</form>
+	const handleSubmit = (event) => {
+		event.preventDefault();
+
+		const myForm = event.target;
+		console.log(myForm)
+		const formData = new FormData(myForm);
+
+		fetch("/", {
+			method: "POST",
+			headers: { "Content-Type": "application/x-www-form-urlencoded" },
+			body: new URLSearchParams(formData).toString(),
+		})
+			// .then(() => navigate("/thank-you/"))
+			.catch((error) => alert(error));
+	};
+	return (
+		<div name='contact' className='w-full h-screen flex justify-center items-center pt-24 bg-gradient-to-l from-[#0a192f] to-black '>
+			<div className='w-3/4 h-3/4'>
+				<form
+					onSubmit={handleSubmit}
+					name='contact'
+					data-netlify='true'
+					method='POST'
+					className='flex flex-col justify-center items-center w-full mx-auto my-auto h-full'
+				>
+					<p className='text-7xl font-extralight text-gray-300 w-3/5'>Contact</p>
+					<div className='border-b-2 border-pink-600 w-3/5 mt-2'></div>
+
+					<p className='text-gray-300 py-8 text-3xl'>// Submit the form below or shoot me an email - sweshields@gmail.com</p>
+					<div className='flex flex-col w-full justify-center items-center'>
+						<input className='bg-[#ccd6f6] p-2 w-[600px] ' type='text' placeholder='Name' name='form-name' />
+						<input className='my-4 p-2 bg-[#ccd6f6] w-[600px] ' type='email' placeholder='Email' name='form-email' />
+						<textarea className='bg-[#ccd6f6] p-2 w-[600px] ' name='form-message' rows='10' placeholder='Message'></textarea>
+						<input className={buttonStyle} type='submit' />
+					</div>
+				</form>
+			</div>
 		</div>
 	);
-}
+};
 
-export default Contact
+export default Contact;

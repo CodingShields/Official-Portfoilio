@@ -39,4 +39,3 @@ export const data = [
 	},
 ];
 
-// Path: src/components/Work.jsx

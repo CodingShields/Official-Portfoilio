@@ -26,7 +26,7 @@ const Home = ({ mobile }) => {
 	};
 
 	return (
-		<div name='home' className='w-full sm:min-w-screen h-screen bg-gradient-to-l from-[#0a192f] to-black overscroll-none'>
+		<div name='home' className='w-full sm:min-w-screen h-screen overscroll-none'>
 			<div className='w-full  mx-auto px-8 flex flex-col justify-center sm:pb-24 sm:pt-12 h-full items-center -wull'>
 				<div className='z-10 group mt-12 w-3/4 sm:w-full h-fit'>
 					<p className='text-pink-600 text-3xl  animate-bounce  font-semibold w-full'>Hi, my name is</p>

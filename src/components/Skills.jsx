@@ -1,7 +1,7 @@
 import skillsArray from "../assets/images/skillsArray";
 const Skills = () => {
 	return (
-		<div name='skills' className='w-full h-screen bg-gradient-to-l from-[#0a192f] to-black  text-gray-300 overflow-y-clip'>
+		<div name='skills' className='w-full h-fit  text-gray-300 '>
 			<div className='w-full h-full'>
 				<div className='p-4 flex flex-col justify-center items-center w-full h-fit'>
 					<p className='text-7xl font-extralight w-3/5 '>Skills</p>

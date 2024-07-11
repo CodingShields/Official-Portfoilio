@@ -2,19 +2,15 @@ import React from "react";
 import { data } from "../data/data.js";
 
 const Work = () => {
-	// projects file
-	const project = data;
-	//setProject(data);
-
 	return (
-		<div name='work' className='w-full h-fit text-gray-300 bg-gradient-to-l from-[#0a192f] to-black '>
+		<div name='work' className='w-full h-fit text-gray-300  to-black '>
 			<div className='w-full h-full '>
 				<div className='mx-auto p-4 flex flex-col justify-center items-center w-full h-fit'>
 					<p className='text-7xl font-extralight w-3/5'>Projects</p>
 					<div className='border-b-2 border-pink-600 w-3/5 mt-2'></div>
 					<p className='py-8 text-3xl'>// Check out some of my recent work</p>
 					<div className='grid grid-cols-2 md:grid-cols-2 gap-24 mt-24'>
-						{project.map((item, index) => (
+						{data.map((item, index) => (
 							<div
 								key={index}
 								style={{

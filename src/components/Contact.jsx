@@ -18,7 +18,7 @@ const Contact = () => {
 			.catch((error) => alert(error));
 	};
 	return (
-		<div name='contact' className='w-full h-screen flex justify-center items-center pt-24 bg-gradient-to-l from-[#0a192f] to-black '>
+		<div name='contact' className='w-full h-full flex justify-center items-center pt-24 bg-gradient-to-l from-[#0a192f] to-black '>
 			<div className='w-3/4 h-3/4'>
 				<form
 					onSubmit={handleSubmit}

@@ -31,9 +31,9 @@ const Contact = () => {
 
 				<p className='text-gray-300 py-8 text-3xl sm:text-xl sm:w-10/12'>// Shoot me a message, I would love to work with you</p>
 				<div className='flex flex-col w-full justify-center items-center'>
-					<input className='bg-[#ccd6f6] p-2 w-[600px] sm:w-[300px]' type='text' placeholder='Name' name='form-name' />
-					<input className='my-4 p-2 bg-[#ccd6f6] w-[600px] sm:w-[300px]' type='email' placeholder='Email' name='form-email' />
-					<textarea className='bg-[#ccd6f6] p-2 w-[600px] sm:w-[300px]' name='form-message' rows='10' placeholder='Message'></textarea>
+					<input className='bg-[#ccd6f6] p-2 w-[600px] sm:w-[300px]' type='text' placeholder='Name' name='form-name' value="name" />
+					<input className='my-4 p-2 bg-[#ccd6f6] w-[600px] sm:w-[300px]' type='email' placeholder='Email' name='form-email' value="email" />
+					<textarea className='bg-[#ccd6f6] p-2 w-[600px] sm:w-[300px]' name='form-message' rows='10' placeholder='Message' value="message"></textarea>
 					<input className={buttonStyle} type='submit' />
 				</div>
 			</form>

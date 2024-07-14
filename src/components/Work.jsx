@@ -19,9 +19,11 @@ const Work = () => {
 								className='w-[400px] lg:h-[400px] sm:h-fit sm:w-[150px] z-50 transition-all ease-in-out duration-300 shadow-2xl hover:scale-110 shadow-black/75 hover:shadow-[#5752e5] group  rounded-md  justify-center text-center items-center mx-auto content-div '
 							>
 								<div className='opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out z-30 flex flex-col justify-center items-center h-full sm:h-fit'>
-									<h2 className='text-2xl font bold text-white tracking-wider sm:text-lg pt-2'>{item.name}</h2>
+									<h2 className='text-2xl font bold text-white tracking-wider sm:text-2xl underline underline-offset-4 decoration-1 pt-2'>{item.name}</h2>
 									<div className='w-fit px-2 mx-auto mt-2'>
-										<p className='text-lg  text-white font-thin sm:text-sm'>{item.about}</p>
+										<p className='text-lg  text-white sm:text-sm font-semibold'>{item.about}</p>
+										<p className='text-lg  text-white font-thin sm:text-sm sm:font-semibold mt-2'>Tech Stack:</p>
+										<p className='text-lg  text-white font-thin sm:text-sm'>{item.tech}</p>
 									</div>
 									<div className='pt-2 text-center '>
 										<a href={item.github} target='_blank'>

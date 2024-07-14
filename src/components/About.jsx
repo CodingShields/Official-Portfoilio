@@ -11,7 +11,7 @@ const About = () => {
 							My Name is Mikey Shields, nice to meet you!
 						</p>
 					</p>
-					<p className='text-4xl sm:text-3xl font-extralight leading-[74px] my-4 w-3/4 sm:w-3/4'>
+					<p className='text-4xl sm:text-2xl font-extralight leading-[74px] my-4 w-3/4 sm:w-3/4'>
 						I am passionate about building excellent software that improves the lives of those around me. I specialize in creating software for
 						clients ranging from individuals and small businesses all the way to large enterprise corporations.
 					</p>
